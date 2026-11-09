@@ -20,7 +20,7 @@ void deposito(){
 	scanf("%f", &valorDeposito);
 	
 	if(valorDeposito <= 0){
-		printf("Valor inválido!!!");
+		printf("Valor invÃ¡lido!!!");
 		return;
 	}
 
@@ -35,25 +35,24 @@ void sacar(){
 	int tentativaSenha;
 	float valorSaque;	
 	
-	printf("Digite a senha para sacar!!");
+	printf("Digite a senha para sacar!!\n");
 	scanf("%d", &tentativaSenha);
 	
 	if(tentativaSenha != senha){
-		printf("Senha incorreta poxa");
+		printf("Senha incorreta poxa\n");
 		return;
 	}
 	
-	printf("Qual o valor que você quer sacar?\n");
-	scanf("%0.2f", valorSaque);
+	printf("Qual o valor que vocÃª quer sacar?\n");
+	scanf("%f", &valorSaque);
 	
 	if(valorSaque > saldoConta){
-		printf("Você não tem todo esse dinheiro!!");
+		printf("VocÃª nÃ£o tem todo esse dinheiro!!\n");
 		return;
 	}
 	
 	saldoConta -= valorSaque;
 }
-
 
 void saldoEestatisticas(){
 	printf("SALDO: %0.2f\nMAIOR DEPOSITO JA FEITO:%0.2f\n", saldoConta, maiorDeposito);
